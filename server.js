@@ -5,6 +5,12 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
+// router 사용
+app.use('/login', require('./routes/login'))
+app.use('/register', require('./routes/register'))
+app.use('/blog', require('./routes/blog'))
+app.use('/chat', require('./routes/chat'))
+
 // mysql 사용하기
 const mysql = require('mysql2');
 
